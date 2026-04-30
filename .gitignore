@@ -211,3 +211,8 @@ vs/
 [Oo]bj/
 *.csv
 *.user
+
+.vs/
+*.csv
+bin/
+obj/
