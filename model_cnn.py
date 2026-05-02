@@ -1,5 +1,5 @@
 ﻿import tensorflow as tf
-from tensorflow.keras import layers, models
+from keras import layers, models
 import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
@@ -30,6 +30,8 @@ model.compile(optimizer='adam',
 print("Training CNN...")
 history = model.fit(X_train_cnn, y_train, epochs=3, 
                     validation_split=0.1, batch_size=64)
+model.save('my_mnist_model.h5')
+print("Model saved to my_mnist_model.h5")
 
 # 4. Оцінка моделі
 loss, acc = model.evaluate(X_test_cnn, y_test)
