@@ -19,7 +19,7 @@ def predict_single_image(model_path, image_pixels):
     # 4. Прогноз моделі (повертає ймовірності для кожної з 10 цифр)
     prediction = model.predict(img_array)
     
-    # 5. Той самий argmax, про який казав викладач (вибираємо індекс з найбільшою ймовірністю)
+    # 5. Той самий argmax, про який казав викладач 
     result = np.argmax(prediction, axis=1)[0]
     
     return int(result)
