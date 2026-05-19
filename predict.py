@@ -19,12 +19,12 @@ def predict_single_image(model_path, image_pixels):
     # 4. Прогноз моделі (повертає ймовірності для кожної з 10 цифр)
     prediction = model.predict(img_array)
     
-    # 5. Той самий argmax, про який казав викладач 
+    # 5. Той самий argmax
     result = np.argmax(prediction, axis=1)[0]
     
     return int(result)
 
-# Блок перевірки: запуститься тільки якщо ти запускаєш саме цей файл
+# Блок перевірки
 if __name__ == "__main__":
     # Створюємо тестову "пусту" картинку (784 нулі), щоб перевірити чи немає помилок у коді
     test_fake_image = np.zeros(784)
